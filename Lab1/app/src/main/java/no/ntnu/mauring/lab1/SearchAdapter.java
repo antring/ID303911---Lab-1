@@ -1,5 +1,6 @@
 package no.ntnu.mauring.lab1;
 
+import android.widget.ArrayAdapter;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -9,15 +10,14 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-
 /**
- * Created by Antring on 18.09.2016.
+ * Created by Antring on 07.10.2016.
  */
 
-
-public class MessageListAdapter extends ArrayAdapter<Message> {
-    public MessageListAdapter(Context context, ArrayList<Message> messages) {
+public class SearchAdapter extends ArrayAdapter<Message> {
+    public SearchAdapter(Context context, ArrayList<Message> messages) {
         super(context, 0, messages);
+
     }
 
     @Override
@@ -30,10 +30,10 @@ public class MessageListAdapter extends ArrayAdapter<Message> {
 
         TextView messageView = (TextView) convertView.findViewById(R.id.textView);
 
-        messageView.setText(message.getUser() + ":\n" + message.getMessage());
+        messageView.setText(message.getMessage());
+
 
         return convertView;
     }
-
 
 }

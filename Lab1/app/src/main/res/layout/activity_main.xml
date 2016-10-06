@@ -11,16 +11,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="no.ntnu.mauring.lab1.MainActivity">
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/messageListView"
-        android:headerDividersEnabled="false"
-        android:footerDividersEnabled="false"
-        android:layout_alignBottom="@+id/mainNewMessageButton"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="21dp" />
-
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/mainNewMessageButton"
         android:layout_width="wrap_content"
@@ -28,6 +18,34 @@
         android:layout_gravity="bottom|end"
         app:srcCompat="@android:drawable/ic_dialog_email"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/messageListView"
+        android:headerDividersEnabled="false"
+        android:footerDividersEnabled="false"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/SearchTextBox" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/SearchTextBox"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:hint="Search"
+        android:layout_toStartOf="@+id/SearchButton" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_search"
+        android:id="@+id/SearchButton"
+        android:layout_above="@+id/messageListView"
         android:layout_alignParentEnd="true" />
 
 
